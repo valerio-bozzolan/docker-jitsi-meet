@@ -155,6 +155,22 @@ services:
             - prosody
         networks:
             meet.jitsi:
+    exporter:
+        image: karrieretutor/jitsi:prom-exporter-latest
+        ports:
+            - "${METRICS_PORT}:8080"
+        environment:
+            - XMPP_USER
+            - XMPP_PW
+            - XMPP_AUTH_DOMAIN
+            - XMPP_SERVER
+            - XMPP_PORT
+            - JVB_BREWERY_MUC
+            - XMPP_INTERNAL_MUC_DOMAIN
+        depends_on:
+            - prosody
+        networks:
+            meet.jitsi:
 
 # Custom network so all services can communicate using a FQDN
 networks:
