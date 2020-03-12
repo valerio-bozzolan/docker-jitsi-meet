@@ -11,6 +11,7 @@ services:
             - ${CONFIG}/web:/config
             - ${CONFIG}/web/letsencrypt:/etc/letsencrypt
             - ${CONFIG}/transcripts:/usr/share/jitsi-meet/transcripts
+        restart: unless-stopped
         environment:
             - ENABLE_AUTH
             - ENABLE_GUESTS
@@ -51,6 +52,7 @@ services:
             - '5280'
         volumes:
             - ${CONFIG}/prosody:/config
+        restart: unless-stopped
         environment:
             - AUTH_TYPE
             - ENABLE_AUTH
@@ -109,6 +111,7 @@ services:
         image: jitsi/jicofo
         volumes:
             - ${CONFIG}/jicofo:/config
+        restart: unless-stopped
         environment:
             - ENABLE_AUTH
             - XMPP_DOMAIN
@@ -138,6 +141,7 @@ services:
             #- "8081:8080"
         volumes:
             - ${CONFIG}/jvb:/config
+        restart: unless-stopped
         environment:
             - DOCKER_HOST_ADDRESS
             - XMPP_AUTH_DOMAIN
