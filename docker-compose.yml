@@ -163,7 +163,7 @@ services:
             - XMPP_USER
             - XMPP_PW
             - XMPP_AUTH_DOMAIN
-            - XMPP_SERVER
+            - XMPP_SERVER=prosody
             - XMPP_PORT
             - JVB_BREWERY_MUC
             - XMPP_INTERNAL_MUC_DOMAIN
