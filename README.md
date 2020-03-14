@@ -42,6 +42,11 @@ modifica il file `.env` ed inserisci i valori corretti nei primi 8 parametri.
 
 se non sai cosa inserire chiedi aiuto nella chat Telegram.
 
+Tieni presente che modificando la porta HTTP, modificherai la porta di ascolto
+del server web che però deve essere esposta su Internet alla porta 80, altrimenti
+[non riuscirai ad ottenere il certificato Let's Encrypt con questa installazione](https://letsencrypt.org/docs/allow-port-80/).
+Ti consigliamo di non cambiarla.
+
 ## 5. avvia il tuo server
 ```
 docker-compose up -d
