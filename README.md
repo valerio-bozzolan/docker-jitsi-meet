@@ -19,9 +19,16 @@ Per installare Docker, ti consiglio di seguire la guida ufficiale:
 
 https://docs.docker.com/install/
 
-Non ci sono requisiti minimi, ma un server con prestazioni migliori sarà in grado di aiutare più persone!
+Per garantire un servizio migliore abbiamo stabilito i seguenti requisiti minimi:
+
+* IPv4 statico (possibilmente in un datacenter italiano)
+* connessione 100 Mbps simmetrica (meglio 1 Gbps, ogni utente occupa circa 4 Mbps)
+* 4 CPU server grade (Xeon o analogo)
+* 4GB di RAM
 
 Server posizionati in datacenter italiani riducono latenza e congestione di rete.
+
+Naturalmente un server più grande riuscirà ad ospitare più utenti!
 
 ## 3. scarica Jitsi Meet
 
