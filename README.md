@@ -21,6 +21,7 @@ https://docs.docker.com/install/
 
 Per garantire un servizio migliore abbiamo stabilito i seguenti requisiti minimi:
 
+• una macchina dedicata allo scopo, non condivisa con altri servizi.
 * IPv4 statico (possibilmente in un datacenter italiano)
 * connessione 100 Mbps simmetrica (meglio 1 Gbps, ogni utente occupa circa 4 Mbps)
 * 4 CPU server grade (Xeon o analogo)
