@@ -50,6 +50,12 @@ modifica il file `.env` ed inserisci i valori corretti nei primi 8 parametri.
 
 se non sai cosa inserire chiedi aiuto nella chat Telegram.
 
+Fatto questo devi generare delle password di sicurezza, per farlo puoi usare
+
+```
+./gen-passwords.sh
+```
+
 Tieni presente che modificando la porta HTTP, modificherai la porta di ascolto
 del server web che però deve essere esposta su Internet alla porta 80, altrimenti
 [non riuscirai ad ottenere il certificato Let's Encrypt con questa installazione](https://letsencrypt.org/docs/allow-port-80/).
