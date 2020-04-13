@@ -43,12 +43,7 @@ def iorestoacasa_exporter(url):
             exported_jitsi_keys += "jitsi_{} {}\n".format(key, value)
 
         if 'jitsi_cpu_usage' not in exported_jitsi_keys:
-            cpu_usage = os.popen("""
-                top -bn 1 |
-                grep -i '^%CPU' |
-                sed 's/%//g' |
-                awk '{print (100.0-$8)/100 }'
-            """).read().strip()
+            cpu_usage = float(os.popen("""top -bn 1 | grep -i '^CPU' | sed 's/%//g'  | awk '{print (100.0-$8)/100 }'""").read().strip())
             exported_jitsi_keys += "jitsi_cpu_usage {}\n".format(cpu_usage)
         exported_jitsi_keys += "jitsi_{} {}\n".format('cpu_core', multiprocessing.cpu_count())
         response.content_type = 'text/plain; charset=utf-8'

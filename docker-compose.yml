@@ -166,16 +166,19 @@ services:
         networks:
             meet.jitsi:
     exporter:
-        image: python:3-slim-buster
+        image: python:alpine
         command: "python iorestoacasa_metrics.py"
         restart: unless-stopped
         network_mode: host
+        stop_signal: SIGKILL
         ports:
             - "${METRICS_PORT}:8081"
         volumes:
             - "./iorestoacasa_metrics.py:/app/iorestoacasa_metrics.py"
             - "./bottle.py:/app/bottle.py"
         working_dir: /app
+        environment:
+            - PYTHONUNBUFFERED=1
         
 # Custom network so all services can communicate using a FQDN
 networks:
