@@ -76,6 +76,13 @@ Per leggere i log usa
 docker-compose logs -f --tail=10
 ```
 
+Se hai un firewall attivo, assicurati che siano aperte le porte:
+* 80/tcp (Web UI HTTP - usata solo per il redirect da HTTP ad HTTPS)
+* 443/tcp (Web UI HTTPS)
+* 4443/tcp (RTP media over TCP)
+* 10000/udp (RTP media over UDP)
+* 8081/tcp (metriche)
+
 ## 6. verifica che il tuo Jitsi funzioni correttamente
 
 apri l'URL della tua istanza con il browser sulla porta 80 e 443.
