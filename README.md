@@ -93,7 +93,10 @@ verifica che le metriche vengano generate correttamente, visitando con il browse
 
 prova a creare una stanza, se riesci a vedere la tua faccia complimenti, sei riuscito ad installare Jitsi!
 
-## 7. comunica la buona notizia nella chat Telegram
+## 7. apri una issue con le informazioni del server
 
-aggiungeremo il tuo server alla tabella sul sito https://iorestoacasa.work
+partendo [da questo template](https://github.com/iorestoacasa-work/iorestoacasa.work/issues/new?assignees=Radeox%2C+tapionx&labels=new+server&template=aggiunta-nuovo-server.md&title=%5BNEW+SERVER%5D)
 
+aggiungeremo prima possibile il tuo server alla tabella sul sito https://iorestoacasa.work.
+
+Di solito ci dedichiamo a questa attività mezz'ora dopo pranzo.
