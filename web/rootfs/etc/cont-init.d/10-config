@@ -98,10 +98,12 @@ if [[ ! -f /config/config.js ]]; then
             /config/config.js
     fi
 
-    if [[ ! -z "${ETHERPAD_URL_BASE}" && -z "$(grep -om1 'etherpad_base:' /config/config.js)" ]]; then
-        sed -i \
-            -e "/enableWelcomePage/a\    etherpad_base: '${PUBLIC_URL}/etherpad/p/'," \
-            /config/config.js
+    # eventually tell Jitsi the Etherpad base URL
+    # See https://github.com/iorestoacasa-work/iorestoacasa.work/issues/21
+    if [[ ! -z "${ETHERPAD_URL_BASE}" ]]; then
+         sed -i \
+             "s~.*etherpad_base.*~    etherpad_base: '${ETHERPAD_URL_BASE}',~"  \
+             /config/config.js
     fi
 
     if [[ $ENABLE_TRANSCRIPTIONS -eq 1 || "$ENABLE_TRANSCRIPTIONS" == "true" ]]; then

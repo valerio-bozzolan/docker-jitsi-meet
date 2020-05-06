@@ -485,7 +485,6 @@ var config = {
      dialOutCodesUrl
      disableRemoteControl
      displayJids
-     etherpad_base
      externalConnectUrl
      firefox_fake_device
      googleApiApplicationClientID
@@ -497,6 +496,10 @@ var config = {
      requireDisplayName
      tokenAuthUrl
      */
+
+    // Etherpad base URL
+    // see https://github.com/jitsi/jitsi-meet/wiki/Etherpad-addition-example
+    // etherpad_base: 'https://example.com/p/',
 
     // List of undocumented settings used in lib-jitsi-meet
     /**
